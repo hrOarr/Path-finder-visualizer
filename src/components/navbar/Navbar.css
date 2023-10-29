@@ -1,0 +1,13 @@
+.app-name {
+    font-size: 32px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #18bfed !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.app-name:hover {
+    color: #18bfed !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+}

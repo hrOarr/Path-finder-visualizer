@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+.inline {
+  display: inline-block;
+  padding-left: 50px;
+}
+:root {
+  --darkgray: #2c3e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.algo-select-dropdown {
+  padding: 10px 22px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: var(--darkgray);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='26' viewBox='0 0 24 24' width='26' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 102%;
+  background-position-y: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+option:checked, option:hover {
+  box-shadow: 0 0 10px 100px #4ddc3b inset;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.custom-btn {
+  box-shadow: 0 0 20px #eee;
+  background-size: 200% auto;
+  color: #fff;
+  transition: 0.5s;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: block;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.init-btn {
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.init-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.visualize-btn {
+  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+}
+
+.visualize-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.clear-btn {
+  background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+}
+
+.clear-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }

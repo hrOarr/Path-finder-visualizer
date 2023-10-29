@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { lazy, Suspense } from 'react';
+import {Container} from "reactstrap";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+
+const Home = lazy(() => import('./pages/Home'));
+const GraphAlgorithms = lazy(() => import('./pages/GraphAlgorithms'));
+const SortingAlgorithms = lazy(() => import('./pages/SortingAlgorithms'));
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Container>
+                <Navbar />
+                <BrowserRouter>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Routes>
+                            <Route path="/" element={<GraphAlgorithms />} />
+                            <Route path="/graph-algorithm" element={<GraphAlgorithms />} />
+                            <Route path="/sorting-algorithm" element={<SortingAlgorithms />} />
+                        </Routes>
+                    </Suspense>
+                </BrowserRouter>
+            </Container>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,69 @@
+.node {
+	width: 2.188rem;
+	height: 2.188rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	outline: 1px solid rgb(175, 216, 248);
+	background-color: #66c7ed;
+	margin: 0.16rem;
+}
+
+.node-start {
+	background-color: green;
+	color: green;
+}
+
+.node-end {
+	background-color: #ab1f96;
+	color: #ab1f96;
+}
+
+.node-wall {
+	background-color: black;
+}
+
+.node-vis {
+	background-color: #3074f2;
+	animation-name: vis;
+	animation-duration: 4s;
+}
+
+@keyframes vis {
+	from {
+		transform: scale(0.50);
+		background-color: red;
+	}
+
+	50% {
+		background-color: orange;
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1);
+		background-color: #3074f2;
+	}
+}
+
+.node-shortest-path {
+  background-color: #400bb3;
+  animation-name: shortest;
+  animation-duration: 4s;
+}
+
+@keyframes shortest {
+  from {
+    transform: scale(0.50);
+    background-color: #21dbbc;
+  }
+  50% {
+    transform: scale(1);
+    background-color: #24bd6d;
+  }
+  to {
+    transform: scale(1);
+    background-color: #24bd6d;
+  }
+}
